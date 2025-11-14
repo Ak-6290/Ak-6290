@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Your Name</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="logo" href="#">Your Name</a>
+        <div class="nav-right">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
+          <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">I build delightful web experiences</h1>
+          <p class="lead">I’m <strong>Your Name</strong> — I craft accessible, fast interfaces with a focus on clarity and performance.</p>
+          <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React</span>
+            <span>Accessibility</span>
+          </div>
+          <p class="hero-cta">
+            <a class="btn" href="#projects">Explore projects</a>
+            <a class="btn btn-outline" href="#contact">Contact</a>
+          </p>
+        </div>
+        <div class="hero-right">
+          <div class="card intro-card">
+            <h3>Currently</h3>
+            <p>Building a design system and shipping components at scale.</p>
+            <p class="muted">Open to freelance & contract work</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section container">
+        <h2>About</h2>
+        <p>I design and build web interfaces. I focus on clean UI, performance and good UX. I enjoy learning new tools and shipping polished products.</p>
+      </section>
+
+      <section id="projects" class="section container">
+        <h2>Selected Projects</h2>
+        <div class="projects-grid">
+          <article class="project" tabindex="0" data-title="Marketing Redesign" data-stack="React · Vite · Netlify" data-desc="A marketing site rebuilt with a component-driven approach." data-image="assets/screenshots/p1.svg">
+            <div class="project-thumb"><img src="assets/screenshots/p1.svg" alt="Marketing Redesign screenshot"></div>
+            <h3>Marketing Redesign</h3>
+            <p class="muted">React, design tokens, accessibility improvements</p>
+            <p><button class="link project-open">Details →</button></p>
+          </article>
+
+          <article class="project" tabindex="0" data-title="Data Viz" data-stack="Vanilla JS · Canvas" data-desc="An interactive data visualization with performant rendering." data-image="assets/screenshots/p2.svg">
+            <div class="project-thumb"><img src="assets/screenshots/p2.svg" alt="Data Viz screenshot"></div>
+            <h3>Data Viz</h3>
+            <p class="muted">Canvas, performance tuning</p>
+            <p><button class="link project-open">Details →</button></p>
+          </article>
+
+          <article class="project" tabindex="0" data-title="API Platform" data-stack="Node · Express" data-desc="Backend API and integrations used by multiple teams." data-image="assets/screenshots/p3.svg">
+            <div class="project-thumb"><img src="assets/screenshots/p3.svg" alt="API Platform screenshot"></div>
+            <h3>API Platform</h3>
+            <p class="muted">APIs, integrations</p>
+            <p><button class="link project-open">Details →</button></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h2>Contact</h2>
+        <p>If you'd like to work together, fill the form below or email me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/yourFormId" method="POST">
+          <label>
+            <span class="muted">Name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            <span class="muted">Email</span>
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            <span class="muted">Message</span>
+            <textarea name="message" rows="5" required placeholder="Tell me about your project"></textarea>
+          </label>
+          <input type="hidden" name="_subject" value="Portfolio contact form">
+          <button class="btn" type="submit">Send message</button>
+          <p id="form-status" class="muted" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name — Crafted with care.</p>
+      </div>
+    </footer>
+
+    <!-- Modal for project details -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+        <div class="modal-media"><img id="modal-image" src="" alt="Project screenshot" style="max-width:100%;border-radius:8px;margin-bottom:12px;display:none"></div>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+        <p id="modal-stack" class="muted"></p>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
